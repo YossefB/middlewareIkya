@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="persistence" transaction-type="JTA">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <jta-data-source>ikya_jpa</jta-data-source>
+    <class>ikya.entities.User</class>
+    <class>ikya.entities.Contact</class>
+    <class>ikya.entities.Defi</class>
+    <properties>
+    <properties>
+			<property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/ikya" />
+			<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver" />
+			<property name="openjpa.ConnectionUserName" value="root" />
+			<property name="openjpa.ConnectionPassword" value="admin" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" />
+		</properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+    </properties>
+  </persistence-unit>
+</persistence>
